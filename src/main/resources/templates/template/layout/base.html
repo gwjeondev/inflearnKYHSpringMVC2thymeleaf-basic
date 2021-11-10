@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="common_header(title,links)">
+
+  <!--매개변수로 전달받은 title을 replace 한다.-->
+  <title th:replace="${title}">레이아웃 타이틀</title>
+
+  <!-- 공통 -->
+  <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/awesomeapp.css}">
+  <link rel="shortcut icon" th:href="@{/images/favicon.ico}">
+  <script type="text/javascript" th:src="@{/sh/scripts/codebase.js}"></script>
+
+  <!-- 추가 -->
+  <!--매개변수로 전달받은 title를 replace 한다.-->
+  <th:block th:replace="${links}" />
+</head>
